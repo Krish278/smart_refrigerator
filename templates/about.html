@@ -1,0 +1,44 @@
+{% extends "navigation.html" %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='style21.css')}}">
+    <title>About</title>
+</head>
+<body>
+    <div class="responsive-container-block bigContainer">
+        <div class="responsive-container-block Container">
+            <img class="mainImg" src="https://www.smarthome.news/Newsimage/20200110230554.jpg" alt="Main Image">
+            <div class="allText aboveText">
+                <p class="text-blk headingText">Our Mission</p>
+                <p class="text-blk subHeadingText">
+                    Smart refrigerators feature a touchscreen interface and the ability to connect to the internet through Wi-Fi to provide a number of additional features.<br><br> Smart refrigerators include internal cameras, more flexible user-controlled cooling options, and the ability for you to interact with its features using your smartphone or tablet when away from home.
+                </p>
+                <p class="text-blk description">
+                    The important thing to remember about all smart home technology that connects to the internet is that it typically uses the same Wi-Fi access you have set up for your other devices to access the internet, such as your smartphones, tablets, computers, and TV streamer devices.
+                </p>
+                <a href="/explore">Explore</button>
+            </div>
+        </div>
+        <div class="responsive-container-block Container bottomContainer">
+            <img class="mainImg" src="https://mobileimages.lowes.com/product/converted/048231/048231796651_08895806.jpg?size=xl?size=sm" alt="Main Image">
+            <div class="allText bottomText">
+                <p class="text-blk headingText">Our Vision</p>
+                <p class="text-blk subHeadingText">
+                    The emergence of intelligent smart refrigerators allows people to fully appreciate the convenience of the refrigerator and gives full play to the use of intelligent refrigerators. Smart refrigerator not only facilitates the convenience of people, but also reduces the waste by supplying the food timely.
+                </p>
+                <p class="text-blk description">
+                    Use the touchscreen interface to:<br><br>
+                    Coordinate schedules for every member of the family.
+                    Look up recipes and have your fridge read the steps while you cook.
+                    Create grocery lists that sync to your smartphone in real-time.
+                    Set expiration dates and receive notifications to use food while it's fresh.
+                </p>
+                <a href="/explore">Explore</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}

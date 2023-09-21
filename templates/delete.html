@@ -1,0 +1,90 @@
+{% extends "navigation.html" %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style21.css')}}css" />
+  <style>
+        table {
+  border-collapse: collapse;
+  width: 85%;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+  margin: 0 auto; 
+  text-align:center;
+}
+
+/* Style the table header */
+th {
+  background-color: #f2f2f2;
+  text-align: left;
+  padding: 8px;
+  border-bottom: 2px solid #333;
+}
+
+/* Style the table rows */
+tr {
+  background-color: #fff;
+}
+
+/* Add a hover effect to the table rows */
+tr:hover {
+  background-color: gray;
+}
+
+/* Style the table cells */
+td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  
+}
+
+/* Add alternating row colors */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+    </style>
+</head>
+<body>
+  <form action='/contents_1' method='post'>
+    <div class="navbar">
+        <button type='submit'>List the contents</a>
+    </div>
+    </form><br>
+  <table align='center'>
+        <thead>
+            <tr>
+                {% for column in col %}
+                    <th>{{ column }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+                <tr>
+                    {% for value in row %}
+                        <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+<main>
+<section id="add-item">
+    <h2 align="center">Remove Item</h2>
+    <form id="add-item-form" action="/remove" method='post'>
+        <label for="item-name" align="center">Item Name:</label>
+        <input type="text" id="item-name" name="item" required align="center">
+
+        <button type="submit" align="center">Remove</button>
+      <p>{{k}}</p>
+    </form>
+</section>
+</main>
+</body>
+</html>
+{% endblock %}

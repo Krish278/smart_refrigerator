@@ -1,0 +1,61 @@
+{% extends "navigation.html" %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Navbar</title>
+    <style>
+        /* CSS for the navigation bar */
+
+
+/* Style the table rows */
+tr {
+  background-color: #fff;
+}
+
+/* Add a hover effect to the table rows */
+tr:hover {
+  background-color: gray;
+}
+
+/* Style the table cells */
+td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  
+}
+
+/* Add alternating row colors */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+    </style>
+</head>
+<body>
+    <!-- HTML for the navigation bar -->
+  <form action='/contents' method='post'>
+    <div class="navbar">
+        <button type='submit'>List the contents</a>
+    </div>
+    </form><br>
+  <table align='center'>
+        <thead>
+            <tr>
+                {% for column in col %}
+                    <th>{{ column }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+                <tr>
+                    {% for value in row %}
+                        <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+{% endblock %}
